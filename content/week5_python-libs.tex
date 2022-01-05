@@ -1,0 +1,14 @@
+\section{Python Libraries}
+\subsection{Matplotlib}
+\subsection{Seaborn}
+\subsection{Pandas}
+\begin{lstlisting}[style=Python]
+#Read File
+data_file = Path("../../Data.csv")
+df = pd.read_csv(data_file)
+#Set Index
+df.set_index('Zimmer', inplace=True)
+#Bar Chart
+dfT.plot.bar(stacked=True, rot=15, title="#Rooms per year", xlabel="Year", ylabel="#apartments", grid = True);
+#Line Plot
+\end{lstlisting}

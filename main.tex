@@ -1,0 +1,29 @@
+%! Licence = CC BY-NC-SA 4.0
+
+%! Author = mariuszindel
+%! Date = 24. Jan 2021
+%! Project = latex-test-template
+
+
+%import template
+\input{./style/template.tex}
+
+
+\newcommand{\TITLE}{AiFo Cheat Sheet}
+\newcommand{\DELIVERYDATE}{17.01.2022}
+
+\begin{document}
+
+\begin{multicols*}{4}
+    \setlength{\columnseprule}{0.4pt}
+    \footnotesize
+
+    %import tableofcontents
+    \input{style/tableofcontents.tex}
+
+    \input{content/summary.tex}
+
+
+\end{multicols*}
+
+\end{document}
