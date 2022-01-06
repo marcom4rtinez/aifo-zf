@@ -11,11 +11,11 @@ Question Answering;
 \begin{enumerate}
     \item \textbf{Data:} Quality of the data is the limit for how good we can do. A few 2-dimensional points with, presumably, a linear relationship.
     \item \textbf{Cost-Function (Loss):} formal mathematical expression for good and bad. e.g.: Mean Squared Error (MSE)
-    \item \textbf{Model:} from linear model with two parameter up to million-parameter neural network. Different task, different model.
+    \item \textbf{Model:} from linear model ($\hat{y_i} = ax_i + b$) with two parameter up to million-parameter neural network. Different task, different model.
     \item \textbf{Optimization Procedure:} Algorithm that changes parameters of model to minimize cost-function. E.g.: SGD, ADAM, RMSProp.
     \item \textbf{Performance optimization:} Good pipelines.
     \item \textbf{Visualization and evaluation of the learning Process:} Learning boards.
-    \item \textbf{Cross-Validation \& Regularization: } Not Covered
+    \item \textbf{Cross-Validation \& Regularization: } Train models that generalize well to unseen data. Estimate the generalization error
 \end{enumerate}
 
 \subsubsection{Example}
@@ -62,7 +62,14 @@ Input: Word Index -> mathematical function -> Output: high deminsional Vector.\\
 \textbf{Advantage:} Close Vectors have semantic similarity.
 With good vectors, you can do math.
 Dot-product is a measure of similarity.
-Add/Subtract vectors.
-
+Add/Subtract vectors.\\
+\textbf{Calculate Similarities between words}
+Dot-Product (Skalarprodukt) of 2 Vectors:
+\begin{itemize}
+    \item maximal when parallel (0\textdegree) (1 with norm (length) 1)
+    \item zero when orthogonal (90\textdegree)
+    \item minimal (negative) when opposite directions (180\textdegree) (-1 with norm (length) 1)
+\end{itemize}
+\includegraphics[width=\linewidth]{distributed_representation.png}
 \subsection{Cosine-similarity or Cosine-distance}
 \includegraphics[width=\linewidth]{cosine-similarity.jpg}
