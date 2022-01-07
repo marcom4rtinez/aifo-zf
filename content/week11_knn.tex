@@ -1,7 +1,11 @@
 \section{K-Nearest-Neighbours (KNN)}
 \subsection{Linearly spearable data}
 \includegraphics[width=\linewidth]{linear-separability.png}
-
+\begin{itemize}
+  \item Based on logistic regression model, you can draw a line
+  \item This is the Linear decision boundary
+  \item If a simple line perfectly seperates the classes, then the classes are said to be linearely seperable
+\end{itemize}
 \subsection{Decision Boundary}
 Boundary with two \textbf{features} (bsc grades and workex):\\
 \includegraphics[width=\linewidth]{decision-boundary.png}\\
@@ -33,7 +37,7 @@ Given a test data point, KNN:
   \item returns the most frequent class of the $k$ neighbours
 \end{itemize}
 For this, \textbf{all} distances to all points have to be calculated.
-\includegraphics[width=\linewidth]{knn-classification.png}
+\includegraphics[width=\linewidth]{knn.png}
 
 \subsection{KNN Details}
 \begin{enumerate}
@@ -48,9 +52,30 @@ For this, \textbf{all} distances to all points have to be calculated.
   \end{enumerate}
 \end{enumerate}
 
+\subsubsection{Advantages}
+\begin{itemize}
+    \item Easy and simple ML model
+    \item Few hyperparameters to tune
+\end{itemize}
+
+\subsubsection{Disadvantages}
+\begin{itemize}
+    \item $k$ should be wisely selected
+    \item Large computation cost during runtime if sample size is large
+    \item Not efficient for high dimensional datasets
+    \item Proper scaling should be provided for fair treatment among features
+\end{itemize}
+
+\subsubsection{Hyperparameters}
+\begin{itemize}
+    \item \textbf{K Value}: how many neighbours to participate in the KNN algo.
+    \item \textbf{Distance Function}: Euclidean distance is most used
+\end{itemize}
+
 \subsubsection{Distance Metric}
 \textbf{Cosine Distance}: See Week 2\\
 \textbf{Manhattan Distance}: $d_M = \displaystyle\sum_{i = 1}^{n}|X_{1,n} - X_{2,n}|$\\
 \includegraphics[width=\linewidth]{manhatten-distance.png}\\
 \textbf{Euclidean Distance}: $d_E = \sqrt{\displaystyle\sum_{i = 1}^{n}(X_{1,n} - X_{2,n})^2}$\\
 \includegraphics[width=\linewidth]{euclidean-distance.png}\\
+\textbf{Minkowski Distance}:  generalization of both the Euclidean distance and the Manhattan distance
