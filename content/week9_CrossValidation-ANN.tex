@@ -1,4 +1,10 @@
 \section{Cross-Validation}
+\textbf{Problem with 80/20 Data Separation}
+\begin{itemize}
+    \item Test Error depends on random set
+    \item For different Set, the test error would be different
+\end{itemize}
+\textbf{With Cross-Validation we can obtain a better estimate of the generalization error}
 \subsection{k-fold Cross-Validation}
 Without Crossvalidation: Train 1 Model with 80\% of the Data and Test with 20\%.\\
 With \textbf{k-fold:}\\
@@ -35,10 +41,13 @@ The neuron calculates the sum adds a bias \textbf{b} and passes it thorugh a \te
 \includegraphics[width=\linewidth]{neuron-activation-function.png}
 \textbf{Bias} here is not the same as in the Trade-Off. Here it is the height on the x scale (a*x + \textbf{b}).
 
+\begin{itemize}
+    \item Receives an input vector $[x_1,x_2, ...]$
+    \item Each neuron has its own input weights $[w_1, w_2, ...]$ and \textbf{bias} b
+    \item Calculates the sum of the weighted input (dot product $\vec{x} * \vec{w}$), adds a bias b, and passes it through a nonlinear activiation function
+\end{itemize}
 \subsection{A simple ANN}
-\includegraphics[width=\linewidth]{simple-ann.png}
-This ANN has: 2 Layers, 3 Neurons, 11 trainable params.\\
-\textbf{Parameters:} The Weights and the Bias of each neuron.
+\includegraphics[width=\linewidth]{ann.png}
 
 \subsection{A complex ANN}
 \includegraphics[width=\linewidth]{complex-ann.png}\\
@@ -47,16 +56,19 @@ ANN with multiple hidden layers are called \textbf{deep} neural networks.
 \subsection{How to train an ANN}
 The ANN is initialized with random weights and produces an output.
 Then, an optimizer (e.g.: SGD) reduces the cost-function (e.g.: MSE).
-Aat every iteration, for every weight and bias, the partial derivative $\frac{\partial}{\partial w}(y - \hat{y})^2$ is calculated.
+At every iteration, for every weight and bias, the partial derivative $\frac{\partial}{\partial w}(y - \hat{y})^2$ is calculated.
 This is done with the Algo \textbf{Backpropagation}\\
 \includegraphics[width=\linewidth]{train-ann.png}
+\textbf{Supervised learning}
+\begin{itemize}
+    \item For each input $\vec{x}$ we are given the output $\vec{y}$
+    \item ANN is initialized with random weights
+    \item An optimizer reduces a cost-function (e.g. MSE)
+    \item At every iteration, and for every single weight $w$ and bias $b$, the partial derivative needs to be calculated. (Backpropagation)
+\end{itemize}
 \subsection{ANN in Computer Science}
-An ANN is a data-structure calles expression-tree. 
+An ANN is a data-structure called expression-tree. 
 Each node can be evaluated.
-Finding the optimal weigths is only possible because of the Backpropagation Algo.\\
+Finding the optimal weight is only possible because of the Backpropagation Algo.\\
 Math perspective: Backpropagation is basically the chain rule.\\
 CS perspective, Backpropagation is a recursive, Dynamic-Programming algorithm.
-
-
-
-

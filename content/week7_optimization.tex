@@ -1,5 +1,10 @@
 \section{Optimization \& SGD}
-\subsection{MSE as Function}
+\begin{itemize}
+    \item Training or learning in AI often suggests an algorithm performing some sort of optimization
+    \item It is the problem of finding a set of inputs to an objective function that results in a maximum or minimum function evaluation
+    \item In our examples the objective is to minimize the loss function
+\end{itemize}
+% \subsection{MSE as Function}
 
 \subsection{Gradient Descent}
 
@@ -68,6 +73,6 @@ The number of update steps needed to come ``close enough'' to the minimum depend
 \subsubsection{General remarks on SGD}
 \begin{itemize}
     \item Gradient-based methods only work if we can express a Loss function as a differentiable function
-    \item SGD is dealing woth only a single datum at each iteration. This is very inefficient and rarely used.
+    \item SGD is dealing with only a single datum at each iteration. This is very inefficient and rarely used.
     \item Batch- or mini-batch gradient-descent is usually used
 \end{itemize}
