@@ -16,6 +16,9 @@ Same concept as KNN, but taken further.
 We try to identify and group data points whose features are similar (close together).
 We partition the data into so called ``clusters''.
 
+\includegraphics[width=\linewidth]{cluster_center.png}
+\includegraphics[width=\linewidth]{euclidean-cluster.png}
+
 \subsection{Naive K-means}
 \begin{enumerate}
   \item Let us assume we know the number of clusters $k_c$
@@ -82,6 +85,7 @@ We partition the data into so called ``clusters''.
     \item Sum of squared distances to center
     \item As small as possible
 \end{itemize}
+\includegraphics[width=\linewidth]{wcss.png}
 \textbf{Silhouette Score}
 \begin{itemize}
     \item How far the datapoints in one cluster are from the datapoints in another cluster
